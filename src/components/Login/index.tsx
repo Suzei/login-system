@@ -12,7 +12,6 @@ const history = unstable_HistoryRouter
 async function onFinish(values: {email: string, password: string}) {
     try {
         await auth.authenticate(values.email, values.password)
-        history.push("/profile")
     } catch (error) {
         message.error('Invalid e-mail or password')
     }
